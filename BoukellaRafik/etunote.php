@@ -2,12 +2,6 @@
 <html>
     <head>
      <meta charset="utf-8">
-        <meta content="IE=edge" http-equiv="X-UA-Compatible">
-        <meta content="width=device-width, initial-scale=1" name="viewport">
-        <meta content="" name="description">
-        <meta content="" name="author">
-        <link href="../../favicon.ico" rel="icon">
-        
         <title> Trombinoscope THYP 2014/2015 </title>
 		<style>
 			h1{

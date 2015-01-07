@@ -119,15 +119,15 @@ class Absence extends Zend_Db_Table_Abstract
      * Recherche une entrée Absence avec la valeur spécifiée
      * et retourne cette entrée.
      *
-     * @param varchar $present
+     * @param varchar $absent
      */
-    public static function findByPresent($present)
+    public static function findByAbsent($absent)
     {
         $db = Zend_Registry::get('dbAdapter');
 
         $query = $db->select()
                     ->from( array("a" => "absence") )                           
-                    ->where( "a.present = " . $present );
+                    ->where( "a.absent = " . $absent );
 
         return $db->fetchRow($query); 
     }

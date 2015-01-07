@@ -27,13 +27,13 @@ class Form_Absence_Supprimer
         $date->setRequired(true)
             ->addValidators(array());
         
-        $present = new Zend_Form_Element_Text('present');
-        $present->setRequired(true)
+        $absent = new Zend_Form_Element_Text('absent');
+        $absent->setRequired(true)
             ->addValidators(array(new Zend_Validate_Alnum(true), new Zend_Validate_StringLength(20)));
         
         
         
-        $this->addElements(array($eleve_id, $date, $present, ));             
+        $this->addElements(array($eleve_id, $date, $absent, ));             
    
     }
             

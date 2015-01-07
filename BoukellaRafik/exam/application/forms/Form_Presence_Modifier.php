@@ -27,13 +27,13 @@ class Form_Presence_Modifier
         $date->setRequired(true)
             ->addValidators(array());
         
-        $absent = new Zend_Form_Element_Text('absent');
-        $absent->setRequired(true)
+        $present = new Zend_Form_Element_Text('present');
+        $present->setRequired(true)
             ->addValidators(array(new Zend_Validate_Alnum(true), new Zend_Validate_StringLength(20)));
         
         
         
-        $this->addElements(array($eleve_id, $date, $absent, ));             
+        $this->addElements(array($eleve_id, $date, $present, ));             
    
     }
             

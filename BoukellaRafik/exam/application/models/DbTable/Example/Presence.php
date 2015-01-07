@@ -119,15 +119,15 @@ class Presence extends Zend_Db_Table_Abstract
      * Recherche une entrée Presence avec la valeur spécifiée
      * et retourne cette entrée.
      *
-     * @param varchar $absent
+     * @param varchar $present
      */
-    public static function findByAbsent($absent)
+    public static function findByPresent($present)
     {
         $db = Zend_Registry::get('dbAdapter');
 
         $query = $db->select()
                     ->from( array("p" => "presence") )                           
-                    ->where( "p.absent = " . $absent );
+                    ->where( "p.present = " . $present );
 
         return $db->fetchRow($query); 
     }
