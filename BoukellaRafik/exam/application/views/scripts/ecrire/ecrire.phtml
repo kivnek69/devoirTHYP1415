@@ -12,9 +12,14 @@
 			}
 		
 			#present{
-			background-color:green;
-			
+			background-color:green;			
 			}
+			
+			body{
+			background-color: #FFFFF0;
+			}
+			
+			
 		</style>
 	</head>
 	<body>
@@ -29,9 +34,11 @@ foreach ($xml->channel->item as $tof) {
 	
 	echo '<div id ="position" align="center">';	
 	echo "<img src='".$tof->enclosure["url"]."' />" . "<br/>$tof->title<br/><br/>";
-	echo '<form action="BoukellaRafik/exam/public/Ecrire/" method="post">';
-	echo '<input type="submit" name="absent" value="Absent" id="absent" >';
-	echo '<input type="submit" name="present" value="Present" id="present">';
+	echo '<form action="BoukellaRafik/exam/public/Ecrire/ecrireAbsence" method="post">';
+	echo '<input type="submit" name="absent" value="Absent" id="absent" >';	
+	echo '</form>';
+	echo '<form action="BoukellaRafik/exam/public/Ecrire/ecrirePresence" method="post">';
+	echo '<input type="submit" name="present" value="Present" id="present" >';	
 	echo '</form>';
 	echo '</div><br/><br/>';
 }
